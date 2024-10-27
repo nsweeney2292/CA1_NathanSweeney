@@ -9,7 +9,7 @@ package ca1_nathansweeney;
  * @author nathansweeney
  */
 public class CA1_NathanSweeney {
-..
+
     /**
      * @param args the command line arguments
      */
