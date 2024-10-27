@@ -51,6 +51,11 @@ public class CA1_NathanSweeney {
                 //converts to int
                 line = br.readLine();
                 int year = Integer.parseInt(line.trim());
+                    if (year <= 1900 || year >= 2025 ){ // check if purchase year is between 1900 and 2024
+                        System.out.println("Error in: " + custName + "\n" + "year is equal to: "
+                                + year + "\n" + "year must be between 1900 and 2024\n"); //error message
+                        continue;
+                    }
                 
                 //new instance/object of customer class
                 customer Cust = new customer(custName, purchase, custClass, year);
