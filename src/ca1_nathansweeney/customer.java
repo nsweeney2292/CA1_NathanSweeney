@@ -23,7 +23,7 @@ public class customer {
         this.year = year;
     }
     
-    // return method for customer info - to be incorporated in CA1 (I hope)
+    // return method for customer info - to be incorporated in CA1
     public String info(){
         return "Customer Name: " + custName + "\n" + 
                 "Value of Purchase: " + purchase + "\n" +
