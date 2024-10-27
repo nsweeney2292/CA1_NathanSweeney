@@ -25,7 +25,10 @@ public class customer {
     
     // return method for customer info - to be incorporated in CA1 (I hope)
     public String info(){
-        return "Customer Name: " + custName + "Value of Purchase: " + purchase + "Customer Class: " + custClass + "Year: " + year;
+        return "Customer Name: " + custName + "\n" + 
+                "Value of Purchase: " + purchase + "\n" +
+                "Customer Class: " + custClass + "\n" +
+                "Year: " + year + "\n";
     }
 }
     

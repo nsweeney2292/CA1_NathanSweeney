@@ -20,12 +20,14 @@ public class CA1_NathanSweeney {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // the name of the txt file being read
         String filename = "customers.txt";
         
+        // create bufferedreader to read text file
         try (BufferedReader br = new BufferedReader(new FileReader(filename))){
             String line;
             
+            //loop needed to read each line from file until the end
             while ((line = br.readLine()) != null){
                 //customers name - first and last - String
                 String custName = line.trim();
@@ -45,8 +47,10 @@ public class CA1_NathanSweeney {
                 line = br.readLine();
                 int year = Integer.parseInt(line.trim());
                 
+                //new instance/object of customer class
                 customer Cust = new customer(custName, purchase, custClass, year);
                 
+                //print the customer info in the correct format
                 System.out.println(Cust.info());
             }
         }catch (IOException e){
