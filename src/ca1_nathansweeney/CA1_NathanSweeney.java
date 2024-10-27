@@ -41,6 +41,11 @@ public class CA1_NathanSweeney {
                 //converts to int
                 line = br.readLine();
                 int custClass = Integer.parseInt(line.trim());
+                    if (custClass < 1 || custClass > 3){ // check if number is outside of required range
+                        System.out.println("Error in: " + custName + "\n" + "class is equal to: " 
+                                + custClass + "\n" + "Customer class must be between 1-3"); // print useful error message
+                        continue; // continue with the program
+                    }
                 
                 //purchase year - int
                 //converts to int
@@ -53,9 +58,10 @@ public class CA1_NathanSweeney {
                 //print the customer info in the correct format
                 System.out.println(Cust.info());
             }
-        }catch (IOException e){
+        }catch (IOException e){//catches any i/o exceptions
             System.out.println("Error in the file");
-        }catch (NumberFormatException e){
+            
+        }catch (NumberFormatException e){//catches any formatting errors
             System.out.println("Number not valid");
         }
     }
