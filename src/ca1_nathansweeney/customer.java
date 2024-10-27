@@ -9,5 +9,24 @@ package ca1_nathansweeney;
  * @author nathansweeney
  */
 public class customer {
+    //fields
+    private String custName;
+    private double purchase;
+    private int custClass;
+    private int year;
     
+    //constructor
+    public customer(String custName, double purchase, int custClass, int year){
+        this.custName = custName;
+        this.purchase = purchase;
+        this.custClass = custClass;
+        this.year = year;
+    }
+    
+    // return method for customer info - to be incorporated in CA1 (I hope)
+    public String info(){
+        return "Customer Name: " + custName + "Value of Purchase: " + purchase + "Customer Class: " + custClass + "Year: " + year;
+    }
 }
+    
+    
