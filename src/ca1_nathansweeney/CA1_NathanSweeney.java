@@ -7,6 +7,8 @@ package ca1_nathansweeney;
 import java.io.BufferedReader; 
 // Reads character data from file - for eg our customers.txt
 import java.io.FileReader;
+//in conjunction with catch for i/o exceptions
+import java.io.IOException;
 
 /**
  *
@@ -43,9 +45,15 @@ public class CA1_NathanSweeney {
                 line = br.readLine();
                 int year = Integer.parseInt(line.trim());
                 
-                //create customer class and add instance below
+                customer Cust = new customer(custName, purchase, custClass, year);
+                
+                System.out.println(Cust.info());
             }
-        }//add catch
+        }catch (IOException e){
+            System.out.println("Error in the file");
+        }catch (NumberFormatException e){
+            System.out.println("Number not valid");
+        }
     }
     
 }
